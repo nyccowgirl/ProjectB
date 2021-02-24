@@ -2,6 +2,14 @@ import java.util.*;
 
 public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<T> {
 
+/**
+ * A class that implements the ADT list with front or back entry or removal and capped to a given capacity,
+ * using List object.
+ *
+ * @author Trang Hoang
+ * @version 1.0
+ */
+
     private List<T> list;
     private boolean initialized = false;
     private final int capacity;
@@ -11,7 +19,6 @@ public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<
         @SuppressWarnings("unchecked")
         List<T> tempList = new ArrayList<>(capacity);  // Unchecked
         list = tempList;
-//        numberOfElements = 0;
         this.capacity = capacity;
         initialized = true;
     }
@@ -135,7 +142,7 @@ public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<
     // Throws an exception if this object is not initialized.
     private void checkInitialization() {
         if (!initialized) {
-            throw new SecurityException("ArrayFrontBackCappedList object is not initialized properly.");
+            throw new SecurityException("ListFrontBackCappedList object is not initialized properly.");
         }
     }
 

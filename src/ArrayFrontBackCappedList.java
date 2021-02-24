@@ -3,7 +3,8 @@ import java.util.*;
 public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface<T> {
 
 /**
- * A class that implements the ADT list with front or back entry or removal and capped to a given capacity.
+ * A class that implements the ADT list with front or back entry or removal and capped to a given capacity,
+ * using array.
  *
  * @author Trang Hoang
  * @version 1.2
@@ -184,8 +185,10 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
     }
 
     /*
+    ****************
     PRIVATE METHODS:
-     */
+    ****************
+    */
 
     // Throws an exception if this object is not initialized.
     private void checkInitialization() {
@@ -194,16 +197,10 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
         }
     }
 
-//    // Returns true if the list is full, or false if not.
-//    private boolean isListFull() {  // TBD: Duplicative of isFull()?
-//        return numberOfElements >= list.length;
-//    }
-
     // Makes room for a new entry in the front of the list.
     // Precondition: numberOfElements is list's length before addition;
     // checkInitialization has been called.
     private void makeRoom() {
-//        DELETE: assert (newPosition >= 1) && (newPosition <= numberOfEntries + 1);
 
         int firstIndex = 0;
         int lastIndex = numberOfElements;
@@ -220,7 +217,6 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
     // Precondition: numberOfElements is list's length before removal;
     // checkInitialization has been called.
     private void removeGap() {
-//        DELETE: assert (givenPosition >= 1) && (givenPosition < numberOfEntries);
 
         int removedIndex = 0;
         int lastIndex = numberOfElements;
@@ -228,9 +224,6 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
         for (int index = removedIndex; index < (lastIndex - 1); index++) {
             list[index] = list[index + 1];
         }
-
-        // TBD: numberOfElements will be reduced -> make last element null -> make consistent with remove from front if so
-//        list[lastIndex - 1] = null;
     }
 
     private boolean validPosition(int position) {
