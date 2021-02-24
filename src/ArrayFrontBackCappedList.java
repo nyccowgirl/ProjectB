@@ -6,7 +6,7 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
  * A class that implements the ADT list with front or back entry or removal and capped to a given capacity.
  *
  * @author Trang Hoang
- * @version 1.0
+ * @version 1.2
  */
 
     private T[] list;
@@ -225,8 +225,12 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
         int removedIndex = 0;
         int lastIndex = numberOfElements;
 
-        for (int index = removedIndex; index < lastIndex; index++)
+        for (int index = removedIndex; index < (lastIndex - 1); index++) {
             list[index] = list[index + 1];
+        }
+
+        // TBD: numberOfElements will be reduced -> make last element null -> make consistent with remove from front if so
+//        list[lastIndex - 1] = null;
     }
 
     private boolean validPosition(int position) {
