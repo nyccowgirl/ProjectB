@@ -7,6 +7,7 @@
  * 
  * @author Jessica Masters
  */
+
 public interface FrontBackCappedListInterface<T> {
 	
 	/**
@@ -18,7 +19,8 @@ public interface FrontBackCappedListInterface<T> {
 	 * @return true if the object was added, false if the list was full and thus the object was not added
 	 */
 	public boolean addFront(T newEntry);
-	
+
+
 	/**
 	 * Adds a new entry to the end of the list if the list is not full.  
 	 * Entries currently in the list are unaffected.
@@ -30,7 +32,6 @@ public interface FrontBackCappedListInterface<T> {
 	public boolean addBack(T newEntry);
 
 
-
 	/**
 	 * Removes an entry from the beginning of the list. 
 	 * Entries currently in the list are shifted up.
@@ -39,7 +40,8 @@ public interface FrontBackCappedListInterface<T> {
 	 * @return A reference to the removed entry or null if the list is empty.
 	 */
 	public T removeFront();
-	
+
+
 	/**
 	 * Removes an entry from the end of the list. 
 	 * Entries currently in the list are unaffected.
@@ -71,7 +73,8 @@ public interface FrontBackCappedListInterface<T> {
 	 * @return the first position the entry that was found or -1 if the object is not found.
 	 */
 	public int indexOf(T anEntry);
-	
+
+
 	/**
 	 * Determines the position in the list of a given entry.
 	 * If the entry appears more than once, the last index is returned.
@@ -80,7 +83,8 @@ public interface FrontBackCappedListInterface<T> {
 	 * @return the last position the entry that was found or -1 if the object is not found.
 	 */
 	public int lastIndexOf(T anEntry);
-	
+
+
 	/**
 	 * Determines whether an entry is in the list.
 	 * 
@@ -97,13 +101,15 @@ public interface FrontBackCappedListInterface<T> {
 	 */
 	public int size();
 
+
 	/**
 	 * Checks whether this list is empty.
 	 * 
 	 * @return True if the list is empty, or false if the list contains one or more elements.
 	 */
 	public boolean isEmpty();
-	
+
+
 	/**
 	 * Checks whether this list is full.
 	 * 
