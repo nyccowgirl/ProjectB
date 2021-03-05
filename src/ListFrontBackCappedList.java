@@ -135,8 +135,10 @@ public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<
                 list.toString();
     }
 
-        /*
+    /*
+    ****************
     PRIVATE METHODS:
+    ****************
      */
 
     // Throws an exception if this object is not initialized.
