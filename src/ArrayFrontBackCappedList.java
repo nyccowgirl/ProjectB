@@ -8,6 +8,7 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
  *
  * Trang Hoang
  * Jared Roussel
+ * Brent Gannetta
  */
 
     private T[] list;

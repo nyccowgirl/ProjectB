@@ -8,6 +8,7 @@ public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<
  *
  * Trang Hoang
  * Jared Roussel
+ * Brent Gannetta
  */
 
     private List<T> list;
