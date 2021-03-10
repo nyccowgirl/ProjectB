@@ -219,7 +219,7 @@ public class ProjectBDriver {
 		testContains(wordList, new String("it!"), true, "test with Strings");
 		testIndexOf(wordList, IndexPosition.FIRST, new String("You"), 0, "test with Strings");
 		testIndexOf(wordList, IndexPosition.LAST, new String("You"), 5, "test with Strings");
-		
+
 	}
 
 	/*
@@ -343,28 +343,28 @@ public class ProjectBDriver {
 		int beforeSize = list.size();
 
 		T actualResult;
-		if(positionToRemove==AddRemovePosition.FRONT) { 	
-			actualResult = list.removeFront();		
+		if (positionToRemove == AddRemovePosition.FRONT) {
+			actualResult = list.removeFront();
 		} else { // positionToRemove==Position.BACK
 			actualResult = list.removeBack();
 		}
-	
+
 		System.out.println("List after  removing: " + list);
 		int expectedAfterSize = 0, actualAfterSize = 0;
-		if(expectedResult!=null) {
+		if (expectedResult != null) {
 			actualAfterSize = list.size();
-			expectedAfterSize = beforeSize-1;
-			if(expectedAfterSize != actualAfterSize) {
+			expectedAfterSize = beforeSize - 1;
+			if (expectedAfterSize != actualAfterSize) {
 				System.out.println("*****Test failed when removing from " + positionToRemove + "; test:" + testDescription);
 				System.out.println("     Expected after size=" + expectedAfterSize + "\tActual after size=" + actualAfterSize);
 			}
 		}
-		if(expectedResult==null && actualResult!=null) {
+		if (expectedResult == null && actualResult != null) {
 			System.out.println("*****Test failed when removing from " + positionToRemove + "; test:" + testDescription);
-			System.out.println("     Expected result=" + expectedResult + "\tActual result=" + actualResult);	
-		} else if(expectedResult!=null && !expectedResult.equals(actualResult)) {
+			System.out.println("     Expected result=" + expectedResult + "\tActual result=" + actualResult);
+		} else if (expectedResult != null && !expectedResult.equals(actualResult)) {
 			System.out.println("*****Test failed when removing from " + positionToRemove + "; test:" + testDescription);
-			System.out.println("     Expected after size=" + expectedAfterSize + "\tActual after size=" + actualAfterSize);
+			System.out.println("     Expected result=" + expectedResult + "\tActual result=" + actualResult);
 		}
 	}
 	public static enum AddRemovePosition {
