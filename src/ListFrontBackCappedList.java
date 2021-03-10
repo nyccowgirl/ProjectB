@@ -7,6 +7,7 @@ public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<
  * using List object.
  *
  * Trang Hoang
+ * Jared Roussel
  */
 
     private List<T> list;
@@ -20,6 +21,9 @@ public class ListFrontBackCappedList<T> implements FrontBackCappedListInterface<
      * @param capacity The capacity of the list
      */
     public ListFrontBackCappedList(int capacity) {
+        if (capacity < 0) {
+            throw new IllegalArgumentException("Capacity must be greater than zero.");
+        }
         // The cast is safe because the new array contains null entries
         @SuppressWarnings("unchecked")
         List<T> tempList = new ArrayList<>(capacity);  // Unchecked
