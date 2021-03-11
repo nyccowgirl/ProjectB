@@ -6,9 +6,9 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
  * A class that implements the ADT list with front or back entry or removal and capped to a given capacity,
  * using array.
  *
- * Trang Hoang
- * Jared Roussel
- * Brent Gannetta
+ * Trang Hoang (sect. 933)
+ * Jared Roussel (sect. 933)
+ * Brent Gannetta (sect. 932)
  */
 
     private T[] list;
@@ -25,6 +25,7 @@ public class ArrayFrontBackCappedList<T> implements FrontBackCappedListInterface
         if (capacity < 0) {
             throw new IllegalArgumentException("Capacity must be greater than zero.");
         }
+
         // The cast is safe because the new array contains null entries
         @SuppressWarnings("unchecked")
         T[] tempList = (T[]) new Object[capacity];  // Unchecked

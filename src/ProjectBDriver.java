@@ -7,10 +7,8 @@ public class ProjectBDriver {
 		FrontBackCappedListInterface<Integer> list = new ArrayFrontBackCappedList<Integer>(10);
 		
 		// un-comment the lines below to test the extra credit
-		/*
 		list = new ListFrontBackCappedList<Integer>(10);
 		System.out.println("********************DRIVER BEING RUN WITH EXTRA CREDIT CLASS***********************************");
-		*/
 
 		System.out.println("*****************************TESTING ISEMPTY AND EMPTY DISPLAY*****************************");
 		// parameter 1: the list
